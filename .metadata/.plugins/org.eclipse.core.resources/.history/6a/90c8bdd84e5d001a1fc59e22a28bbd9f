@@ -1,0 +1,15 @@
+package com.silesbonilla.springdemo;
+
+public class RandomFortuneService implements FortuneService {
+	private String [] fortunes;
+	
+	private String fortune1;
+	private String fortune2;
+	private String fortune3;
+	
+	@Override
+	public String getFortune() {
+		return null;
+	}
+
+}

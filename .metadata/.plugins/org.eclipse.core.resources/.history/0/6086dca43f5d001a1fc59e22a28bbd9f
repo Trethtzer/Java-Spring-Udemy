@@ -1,0 +1,17 @@
+package com.silesbonilla.springdemo;
+
+public class TrackCoach implements Coach {
+
+	@Override
+	public String GetDailyWorkout() {
+		// TODO Auto-generated method stub
+		return "Run until you can't continue, then run more";
+	}
+
+	@Override
+	public String GetDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

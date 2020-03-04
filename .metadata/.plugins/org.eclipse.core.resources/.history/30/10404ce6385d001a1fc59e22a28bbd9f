@@ -1,0 +1,11 @@
+package com.silesbonilla.springdemo;
+
+public class BasketballCoach implements Coach {
+
+	@Override
+	public String GetDailyWorkout() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

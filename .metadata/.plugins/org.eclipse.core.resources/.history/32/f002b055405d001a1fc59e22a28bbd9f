@@ -1,0 +1,20 @@
+package com.silesbonilla.springdemo;
+
+public class BasketballCoach implements Coach {
+	private FortuneService fortuneService;
+	
+	public BasketballCoach(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
+	
+	@Override
+	public String GetDailyWorkout() {
+		return "Jugar al basket hasta meterle una manita a Angel";
+	}
+
+	@Override
+	public String GetDailyFortune() {
+		return fortuneService.getFortune();
+	}
+
+}
