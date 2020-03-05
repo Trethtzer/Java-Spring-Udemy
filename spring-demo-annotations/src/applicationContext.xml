@@ -9,9 +9,11 @@
 		http://www.springframework.org/schema/context/spring-context.xsd"
 >	
 	
-	<context:component-scan base-package="com.silesbonilla.springdemo"/>		
+	<context:component-scan base-package="com.silesbonilla.springdemo"/>
 	
-	<bean id="myLoggerConfig" class="com.silesbonilla.springdemo.MyLoggerConfig" init-method="initLogger">
+	<context:property-placeholder location="classpath:fortunes.properties"/>		
+	
+	<bean id="myLoggerConfig" class="com.silesbonilla.springdemo.beans.MyLoggerConfig" init-method="initLogger">
     	<property name="rootLoggerLevel" value="FINE" />
     	<property name="printedLoggerLevel" value="FINE"/>
     </bean>

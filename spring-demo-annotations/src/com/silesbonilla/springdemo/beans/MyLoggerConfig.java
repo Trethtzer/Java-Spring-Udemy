@@ -1,4 +1,4 @@
-package com.silesbonilla.springdemo;
+package com.silesbonilla.springdemo.beans;
 
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
