@@ -1,5 +1,0 @@
-package com.silesbonilla.springdemo;
-
-public interface FortuneService {
-
-}

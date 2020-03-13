@@ -1,7 +1,0 @@
-package com.silesbonilla.springdemo;
-
-public class BaseballCoach {
-	public String GetDailyWorkout() {
-		return "Spend 30 minutes doing jumping jacks";
-	}
-}
