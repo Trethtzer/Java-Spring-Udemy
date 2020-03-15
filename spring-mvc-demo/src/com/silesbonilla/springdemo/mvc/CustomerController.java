@@ -42,6 +42,11 @@ public class CustomerController {
 		
 		System.out.println("Customer's first name" + theCustomer.getFirstName());
 		System.out.println("Customer's second name" + theCustomer.getLastName());
+		System.out.println("Customer's passes: " + theCustomer.getFreePass());
+		
+		System.out.println("\n\n");
+		System.out.println("Binding result: " + theBindingResult);
+		System.out.println("\n\n");
 		
 		if(theBindingResult.hasErrors()) {
 			return "customer-form";
