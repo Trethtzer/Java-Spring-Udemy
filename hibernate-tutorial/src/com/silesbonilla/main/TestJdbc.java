@@ -1,4 +1,4 @@
-package com.silesbonilla.jdbc;
+package com.silesbonilla.main;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

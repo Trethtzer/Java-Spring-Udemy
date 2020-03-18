@@ -7,34 +7,37 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name="student")
-public class Student {
+@Table(name="employee")
+public class Employee {
 	
 	@Id
-	@Column(name="id")
+	@Column(name="idEmployee")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(name="first_name")
+	@Column(name="firstName")
 	private String firstName;
 	
-	@Column(name="last_name")
+	@Column(name="lastName")
 	private String lastName;
 	
-	@Column(name="email")
-	private String email;
+	@Column(name="pm")
+	private int pm;
+
 	
-
-
-	public Student(String firstName, String lastName, String email) {		
+	
+	public Employee(String firstName, String lastName, int pm) {
+		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.email = email;
+		this.pm = pm;
 	}
-	public Student() {}
 	
+	public Employee() {
+		
+	}
+
 	
 	
 	public int getId() {
@@ -58,12 +61,14 @@ public class Student {
 		this.lastName = lastName;
 	}
 
-	public String getEmail() {
-		return email;
+	public int getPm() {
+		return pm;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPm(int pm) {
+		this.pm = pm;
 	}
 	
 	
+	
+
 }

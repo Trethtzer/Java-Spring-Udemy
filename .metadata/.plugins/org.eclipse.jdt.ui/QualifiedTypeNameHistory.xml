@@ -48,4 +48,12 @@
     <fullyQualifiedTypeName name="javax.validation.Payload"/>
     <fullyQualifiedTypeName name="javax.validation.ConstraintValidator"/>
     <fullyQualifiedTypeName name="com.silesbonilla.springdemo.utils.CourseCode"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.Entity"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.Table"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
 </qualifiedTypeNameHistroy>
