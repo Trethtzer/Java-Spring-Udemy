@@ -4,6 +4,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.silesbonilla.aopdemo.DemoConfig;
 import com.silesbonilla.aopdemo.dao.AccountDAO;
+import com.silesbonilla.aopdemo.dao.MembershipDAO;
 
 public class MainDemoApp {
 
@@ -14,6 +15,10 @@ public class MainDemoApp {
 		AccountDAO accountDAO = context.getBean("accountDAO",AccountDAO.class);
 		
 		accountDAO.addAccount();
+		
+		MembershipDAO membershipDAO = context.getBean("membershipDAO",MembershipDAO.class);
+		
+		System.out.println(membershipDAO.addAccount());
 		
 		context.close();
 
