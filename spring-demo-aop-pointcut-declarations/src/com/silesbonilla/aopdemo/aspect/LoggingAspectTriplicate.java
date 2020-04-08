@@ -7,12 +7,12 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-@Order(0)
-public class LoggingAspect{
+@Order(200)
+public class LoggingAspectTriplicate {
 	
 	@Before("com.silesbonilla.aopdemo.aspect.MyPointcuts.forDaoPackageWithoutGetsSets()")
-	public void beforeAddAccountAdvice() {
-		System.out.println("STANDARD BEFORE!!!");
+	public void beforeDoSomeLoggings() {
+		System.out.println("LOGGINGS!!!!");
 	}
 	
 }
