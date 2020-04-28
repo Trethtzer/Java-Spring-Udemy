@@ -3,7 +3,10 @@ package com.silesbonilla.springrestdemo.rest;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +16,18 @@ import com.silesbonilla.springrestdemo.entity.Student;
 @RequestMapping("/api")
 public class DemoRestController {
 	
+	private List<Student> theStudents;
+	
+	// define @PostConstruct to load teh student data .. .only once!
+	@PostConstruct
+	public void loadData() {
+		theStudents = new ArrayList<>();
+		theStudents.add(new Student("Ben", "Hanscom"));
+		theStudents.add(new Student("Bill", "Denbrough"));
+		theStudents.add(new Student("Beverly", "Hill"));
+		theStudents.add(new Student("Richie", "Tozier"));
+	}
+	
 	// add code for the "/hello" endpoint
 	@GetMapping("/hello")
 	public String sayHello() {
@@ -20,14 +35,14 @@ public class DemoRestController {
 	}
 	
 	@GetMapping("/students")
-	public List<Student> getStudents() {
-		List<Student> students = new ArrayList<>();
+	public List<Student> getStudents() {		
 		
-		students.add(new Student("Ben", "Hanscom"));
-		students.add(new Student("Bill", "Denbrough"));
-		students.add(new Student("Beverly", "Hill"));
-		students.add(new Student("Richie", "Tozier"));
+		return theStudents;
+	}
+	
+	@GetMapping("/students/{studentid}")
+	public Student getStudent(@PathVariable int studentid) {
 		
-		return students;
+		return theStudents.get(studentid);
 	}
 }
