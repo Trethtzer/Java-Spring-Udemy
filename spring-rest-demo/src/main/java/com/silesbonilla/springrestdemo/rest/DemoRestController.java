@@ -5,6 +5,9 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,6 +46,15 @@ public class DemoRestController {
 	@GetMapping("/students/{studentid}")
 	public Student getStudent(@PathVariable int studentid) {
 		
+		if (studentid >= theStudents.size() || studentid < 0) {
+			throw new StudentNotFoundException("Student id not found - " + studentid);
+		}
+		
 		return theStudents.get(studentid);
 	}
+	
+	
+	
+	
+	
 }
